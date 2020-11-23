@@ -490,7 +490,8 @@ var TextInput = (function (_super) {
             // focus this input if the pointer hasn't moved XX pixels
             // and the input doesn't already have focus
             if (!hasPointerMoved(8, this._coord, endCoord) && !this.isFocus()) {
-                ev.preventDefault();
+                //fix can't tap into field problem
+                //ev.preventDefault();
                 ev.stopPropagation();
                 // begin the input focus process
                 this._jsSetFocus();
